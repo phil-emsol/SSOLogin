@@ -20,7 +20,7 @@ namespace SSOLogin
             string strClaims = "";
             foreach (System.Security.Claims.Claim claim in claimsIdentity.Claims)
             {
-                strClaims += "&" + claim.Type + "=" + claim.Value;
+                strClaims += claim.Type + "=" + claim.Value + "!";
             }
 
             string strCookie = Encrypt("Encrypt Me", "90033E3984CEF5A659C44BBB47299B4208374FB5DC495C96", "E6B9AFA7A282A0CA");
