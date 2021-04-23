@@ -30,6 +30,8 @@ namespace SSOLogin
 
             //Add key-values in the cookie
             myCookie.Values.Add("SSOValidation", strCookie);
+            myCookie.Values.Add("SSOClaims", strClaims);
+
 
             //set cookie expiry date-time. Made it to last for next 12 hours.
             myCookie.Expires = DateTime.Now.AddMinutes(5);
